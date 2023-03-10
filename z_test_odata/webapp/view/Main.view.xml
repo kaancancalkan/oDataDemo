@@ -1,0 +1,41 @@
+<mvc:View controllerName="com.enerya.ztestodata.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Table id="idProductsTable"
+            updateFinished="onTableUpdateFinish"
+            selectionChange="onSelectionChange"
+            mode="SingleSelectMaster"
+            inset="false"
+            items="{/FirmaProjeSet}">
+		<headerToolbar>
+			<OverflowToolbar>
+				<content>
+					<Title text="Products" level="H2"/>
+					<ToolbarSpacer />
+                    <Text text="{main>/Proje/Pno}"/>
+                    <Text text="{main>/Proje/KayitTarih}"/>
+				</content>
+			</OverflowToolbar>
+		</headerToolbar>
+		<columns>
+			<Column width="12em">
+				<Text text="Proje No" />
+			</Column>
+            <Column width="12em">
+				<Text text="Tanım" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem vAlign="Middle" type="Active">
+				<cells>
+					<Text text="{Pno}" />
+                    <Text text="{Tanim}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+        </content>
+    </Page>
+</mvc:View>
