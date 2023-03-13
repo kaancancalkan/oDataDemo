@@ -15,7 +15,10 @@
 					<Title text="Products" level="H2"/>
 					<ToolbarSpacer />
                     <Text text="{main>/Proje/Pno}"/>
-                    <Text text="{main>/Proje/KayitTarih}"/>
+                    <Text text="{
+    path: 'main>/Proje/KayitTarih',
+    formatter: '.formatDate'
+}"/>
 				</content>
 			</OverflowToolbar>
 		</headerToolbar>

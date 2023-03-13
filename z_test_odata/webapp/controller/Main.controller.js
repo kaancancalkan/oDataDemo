@@ -25,6 +25,14 @@ sap.ui.define([
                 oMainModel.setProperty("/Proje", oRowData);
 
                 console.log(oRowData);
+            },
+
+            formatDate: function(date) {
+                if (!date) {
+                    return "";
+                }
+                var dateFormatter = sap.ui.core.format.DateFormat.getDateInstance({pattern: "MM/dd/yyyy"});
+                return dateFormatter.format(date);
             }
         });
     });
