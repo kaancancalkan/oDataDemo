@@ -1,8 +1,17 @@
 <mvc:View controllerName="com.enerya.ztestodata.controller.Main"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+    xmlns="sap.m"
+		xmlns:f="sap.ui.layout.form"
+		xmlns:l="sap.ui.layout"
+		>
     <Page id="page" title="{i18n>title}">
         <content>
+		<Dialog
+		title="{i18n>title}"
+		
+		
+		
+		></Dialog>
             <Table id="idProductsTable"
             updateFinished="onTableUpdateFinish"
             selectionChange="onSelectionChange"
